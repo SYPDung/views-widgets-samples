@@ -15,5 +15,5 @@
   -->
 
 <resources>
-    <string name="app_name">WebView Weather</string>
+    <string name="app_name">WebView Local</string>
 </resources>

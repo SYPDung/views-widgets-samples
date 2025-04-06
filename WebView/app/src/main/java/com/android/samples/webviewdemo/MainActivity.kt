@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val jsObjName = "jsObject"
-        val allowedOriginRules = setOf("https://raw.githubusercontent.com")
+        val allowedOriginRules = setOf("https://testwebview.com")
 
         // Configuring Dark Theme
         // *NOTE* : The force dark setting is not persistent. You must call the static
@@ -103,23 +103,23 @@ class MainActivity : AppCompatActivity() {
 
         // Configure asset loader with custom domain
         // *NOTE* :
-        // The assets path handler is set with the sub path /views-widgets-samples/ here because we
+        // The assets path handler is set with the sub path /local-web-sample/ here because we
         // are tyring to ensure that the address loaded with
-        // loadUrl("https://raw.githubusercontent.com/views-widgets-samples/assets/index.html") does
+        // loadUrl("https://testwebview.com/local-web-sample/assets/index.html") does
         // not conflict with a real web address. In this case, if the path were only /assests/ we
-        // would need to load "https://raw.githubusercontent.com/assets/index.html" in order to
+        // would need to load "https://testwebview.com/assets/index.html" in order to
         // access our local index.html file.
-        // However we cannot guarantee "https://raw.githubusercontent.com/assets/index.html" is not
+        // However we cannot guarantee "https://testwebview.com/assets/index.html" is not
         // a valid web address. Therefore we must let the AssetLoader know to expect the
-        // /views-widgets-samples/ sub path as well as the /assets/.
+        // /local-web-sample/ sub path as well as the /assets/.
         val assetLoader = WebViewAssetLoader.Builder()
-            .setDomain("raw.githubusercontent.com")
+            .setDomain("testwebview.com")
             .addPathHandler(
-                "/views-widgets-samples/assets/",
+                "/local-web-sample/assets/",
                 WebViewAssetLoader.AssetsPathHandler(this)
             )
             .addPathHandler(
-                "/views-widgets-samples/res/",
+                "/local-web-sample/res/",
                 WebViewAssetLoader.ResourcesPathHandler(this)
             )
             .build()
@@ -147,6 +147,6 @@ class MainActivity : AppCompatActivity() {
         ) { message -> invokeShareIntent(message) }
 
         // Load the content
-        binding.webview.loadUrl("https://raw.githubusercontent.com/views-widgets-samples/assets/index.html")
+        binding.webview.loadUrl("https://testwebview.com/local-web-sample/assets/index2.html")
     }
 }

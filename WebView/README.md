@@ -16,12 +16,12 @@ This sample uses the Gradle build system. To build this project, use the
 - Stack Overflow: [http://stackoverflow.com/questions/tagged/android][3]
 
 If you've found an error in this sample, please file an issue:
-[https://github.com/android/views-widgets-samples][2]
+[https://github.com/android/local-web-sample][2]
 
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub. Please see [CONTRIBUTING.md][4] for more details.
 
 [1]: https://developer.android.com/reference/androidx/webkit/package-summary
-[2]: https://github.com/android/views-widgets-samples
+[2]: https://github.com/android/local-web-sample
 [3]: http://stackoverflow.com/questions/tagged/android
-[4]: https://github.com/android/views-widgets-samples/blob/main/CONTRIBUTING.md
+[4]: https://github.com/android/local-web-sample/blob/main/CONTRIBUTING.md
